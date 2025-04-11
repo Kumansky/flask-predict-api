@@ -1,29 +1,29 @@
 # Flask Predict API
 
-Prosty serwis API zbudowany przy użyciu Flask, który wykonuje predykcję na podstawie dwóch liczb przekazanych w zapytaniu GET.
+A simple API service built with Flask that makes a prediction based on two numbers provided via a GET request.
 
 ---
 
 ## 🔍 Endpoint
 
 ```
-GET /api/v1.0/predict?x1=<liczba1>&x2=<liczba2>
+GET /api/v1.0/predict?x1=<number1>&x2=<number2>
 ```
 
-### 📌 Zasady działania:
-- Jeśli **suma dwóch liczb** (`x1 + x2`) > **5.8**, aplikacja zwraca `prediction: 1`
-- W przeciwnym razie zwraca `prediction: 0`
-- Jeśli liczby nie są podane – domyślnie przyjmuje `0`
+### 📌 Logic:
+- If the **sum of the two numbers** (`x1 + x2`) is greater than **5.8**, the application returns `prediction: 1`
+- Otherwise, it returns `prediction: 0`
+- If the numbers are not provided, default values of `0` are used
 
 ---
 
-## 🧪 Przykład zapytania
+## 🧪 Example request
 
 ```
 GET http://localhost:5000/api/v1.0/predict?x1=3.5&x2=3.0
 ```
 
-**Odpowiedź JSON:**
+**Response JSON:**
 ```json
 {
   "prediction": 1,
@@ -37,13 +37,13 @@ GET http://localhost:5000/api/v1.0/predict?x1=3.5&x2=3.0
 
 ---
 
-## 🚀 Uruchomienie lokalnie
+## 🚀 Run locally
 
-### Wymagania:
+### Requirements:
 - Python 3.x
 - Flask
 
-### Krok po kroku:
+### Steps:
 ```bash
 pip install -r requirements.txt
 python app.py
@@ -51,32 +51,32 @@ python app.py
 
 ---
 
-## 🐳 Uruchomienie z użyciem Dockera
+## 🐳 Run with Docker
 
-1. Zbuduj obraz:
+1. Build the image:
 ```bash
 docker build -t flask-predict-api .
 ```
 
-2. Uruchom kontener:
+2. Run the container:
 ```bash
 docker run -p 5000:5000 flask-predict-api
 ```
 
-3. Otwórz przeglądarkę:
+3. Open in browser:
 ```
 http://localhost:5000/api/v1.0/predict?x1=2.5&x2=4
 ```
 
 ---
 
-## 📁 Zawartość repozytorium
+## 📁 Repository contents
 
-- `app.py` – główny plik aplikacji Flask
-- `requirements.txt` – zależności projektu
-- `Dockerfile` – konfiguracja dla konteneryzacji w Dockerze
+- `app.py` – main Flask application file
+- `requirements.txt` – project dependencies
+- `Dockerfile` – Docker container configuration
 
 ---
 
-## 👨‍💻 Autor
-Projekt wykonany w ramach zadania domowego z przedmiotu **Analiza danych w czasie rzeczywistym**.
+## 👨‍💻 Author
+Project created as part of a homework assignment for the course **Real-Time Data Analysis**.
