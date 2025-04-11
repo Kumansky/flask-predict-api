@@ -4,20 +4,20 @@ A simple API service built with Flask that makes a prediction based on two numbe
 
 ---
 
-## 🔍 Endpoint
+##  Endpoint
 
 ```
 GET /api/v1.0/predict?x1=<number1>&x2=<number2>
 ```
 
-### 📌 Logic:
+###  Logic:
 - If the **sum of the two numbers** (`x1 + x2`) is greater than **5.8**, the application returns `prediction: 1`
 - Otherwise, it returns `prediction: 0`
 - If the numbers are not provided, default values of `0` are used
 
 ---
 
-## 🧪 Example request
+##  Example request
 
 ```
 GET http://localhost:5000/api/v1.0/predict?x1=3.5&x2=3.0
@@ -37,7 +37,7 @@ GET http://localhost:5000/api/v1.0/predict?x1=3.5&x2=3.0
 
 ---
 
-## 🚀 Run locally
+##  Run locally
 
 ### Requirements:
 - Python 3.x
@@ -51,7 +51,7 @@ python app.py
 
 ---
 
-## 🐳 Run with Docker
+##  Run with Docker
 
 1. Build the image:
 ```bash
@@ -70,13 +70,13 @@ http://localhost:5000/api/v1.0/predict?x1=2.5&x2=4
 
 ---
 
-## 📁 Repository contents
+##  Repository contents
 
-- `app.py` – main Flask application file
-- `requirements.txt` – project dependencies
-- `Dockerfile` – Docker container configuration
+- `app.py`  main Flask application file
+- `requirements.txt`  project dependencies
+- `Dockerfile`  Docker container configuration
 
 ---
 
-## 👨‍💻 Author
+##  Author
 Project created as part of a homework assignment for the course **Real-Time Data Analysis**.
